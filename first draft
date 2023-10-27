@@ -1,1 +1,42 @@
-Python dictionary
+Python dictionary: is a key-value pairs
+
+# dictionary for courses and rooms taught
+CoursesRooms = {
+    'CSC101': 'ROOM 3004',
+    'CSC102': 'ROOM 4501',
+    'CSC103': 'ROOM 6755',
+    'NET110': 'ROOM 1244',
+    'COM 241':'ROOM 1411',
+}
+
+CoursesInstructors = {
+    'CSC101': 'Prof. Haynes',
+    'CSC102': 'Dr. Alvarado',
+    'CSC103': 'Prof. Rich',
+    'NET110': 'Prof. Burk',
+    'COM241': 'Prof. Lee',
+}
+
+CoursesMeetingTimes = {
+    'CSC101': '8:00 A.M',
+    'CSC102': '9:00 A.M',
+    'CSC103': '2:00 P.M',
+    'NET110': '1:00 P.M',
+     'COM241': '1:00 P.M',
+}
+
+# asking user for course number
+CourseNumber = input("Please enter your course number: ")
+
+# Displaying cours informations
+if CourseNumber in CoursesRooms:
+    RoomNumber = CoursesRooms[CourseNumber]
+    CourseInstructor = CoursesInstructors[CourseNumber]
+    MeetingTime = CourseMeetingTimes[CourseNumber]
+
+    print(f"Course Number: {CourseNumber}")
+    print(f"Room Number: {RoomNumber}")
+    print(f"Instructor: {CourseInstructor}")
+    print(f"Meeting Time: {MeetingTime}")
+else:
+    print(f"Course number '{CourseNumber}' does not exist.")
